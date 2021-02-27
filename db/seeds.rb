@@ -18,7 +18,7 @@ puts "User was created."
 # Creating users store
 users_store = Store.create(
     store_name: Faker::Company.name,
-    store_capacity: 20,
+    store_capacity: 5,
     qr_code: 'test', # need to be changed
     user_id: user.id
 )
