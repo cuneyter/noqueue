@@ -1,0 +1,2 @@
+class QueuePositionsController < ApplicationController
+end
