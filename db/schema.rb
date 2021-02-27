@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_02_27_103539) do
   end
 
   create_table "queue_positions", force: :cascade do |t|
-    t.boolean "entered"
+    t.boolean "entered", default: false
     t.bigint "customer_id", null: false
     t.bigint "store_id", null: false
     t.datetime "created_at", precision: 6, null: false
