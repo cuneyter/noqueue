@@ -8,6 +8,24 @@
 
 require 'faker'
 
+puts "Start cleaning database"
+
+puts "Deleting Queue Positions"
+QueuePosition.destroy_all
+puts 'Queue positions database is clean'
+
+puts "Deleting Customers"
+Customer.destroy_all
+puts 'Customer database is clean'
+
+puts "Deleting Stores"
+Store.destroy_all
+puts 'Stores database is clean'
+
+puts "Deleting Users/Owners"
+User.destroy_all
+puts 'User/Owner database is clean'
+
 # Creating user (shop owner)
 user = User.create(
     email: "user@user.example",
@@ -27,7 +45,7 @@ puts "Store \"#{users_store.store_name}\" was created."
 # Creating users and queue positions
 10.times do
     customer = Customer.create(
-        mobile_number: Faker::Base.numerify('+44 #### ### ###')
+        mobile_number: Faker::Base.numerify('0044 #### ### ###')
         )
     customers_queue = QueuePosition.create(
         customer_id: customer.id,
