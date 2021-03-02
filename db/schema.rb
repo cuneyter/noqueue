@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_27_103539) do
+ActiveRecord::Schema.define(version: 2021_03_02_212518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_02_27_103539) do
     t.bigint "store_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "position"
     t.index ["customer_id"], name: "index_queue_positions_on_customer_id"
     t.index ["store_id"], name: "index_queue_positions_on_store_id"
   end
