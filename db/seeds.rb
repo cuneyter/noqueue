@@ -42,6 +42,8 @@ users_store = Store.create(
 )
 puts "Store \"#{users_store.store_name}\" was created."
 
+position = 1
+
 # Creating users and queue positions
 10.times do
     customer = Customer.create(
@@ -49,8 +51,10 @@ puts "Store \"#{users_store.store_name}\" was created."
         )
     customers_queue = QueuePosition.create(
         customer_id: customer.id,
-        store_id: users_store.id
+        store_id: users_store.id,
+        position: position
         )
-    puts "Customer #{customer.id} provided a phone number \"#{customer.mobile_number}\" and was added as #{customers_queue.id} to the queue."
+    puts "Customer #{customer.id} provided a phone number \"#{customer.mobile_number}\" and was added as #{customers_queue.position} to the queue."
+    position += 1
 end
 puts "Database seeded!"
