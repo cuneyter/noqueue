@@ -1,0 +1,6 @@
+<h1>Form to create a queue position</h1>
+
+  <%= simple_form_for [ @store, @customer ] do |f| %>
+    <%= f.input :mobile_number %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
