@@ -1,14 +1,15 @@
 .page-header {
   text-align: center;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 110px;
   padding-bottom: 10px;
 }
 
 .page-subheader {
   text-align: center;
   margin: 0 auto;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .card-number {
@@ -24,4 +25,51 @@
   border-radius: 50px;
   width: 235px;
   margin: 0 auto;
+}
+
+.status-buttons {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.btn-leave {
+  color: #2F2E41;
+  background-color: white;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  height: 70px;
+  width: 70px;
+}
+
+.btn-leave:hover {
+  opacity: 1;
+}
+
+.btn-alert {
+  color: #2F2E41;
+  background-color: white;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  height: 70px;
+  width: 70px;
+}
+
+.btn-alert:hover {
+  opacity: 1;
 }
