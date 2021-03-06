@@ -12,6 +12,12 @@ class StoresController < ApplicationController
     end
   end
 
+  def show
+    @store = Store.find(params[:id])
+    @customer = Customer.new
+    # @queue_position = QueuePosition.new
+  end
+
   def index
     @store = Store.all
   end
