@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :stores, except: %i[new create index show] do
     resources :customers, only: %i[new create] do
-      resources :queue_positions, only: %i[show update]
+      resources :queue_positions, only: %i[new create show update destroy]
     end
   end
   resources :queue_positions, only: %i[destroy]
