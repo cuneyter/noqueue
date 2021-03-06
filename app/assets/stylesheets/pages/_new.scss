@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-  body {
-    background: #F8F8FD;
-  }
-
-  img {
-    position: absolute;
-    width: 362px;
-    height: 265px;
-    left: 6px;
-    top: 58px;
-  }
-
-  h1 {
+  .h1-new {
     position: absolute;
     width: 320px;
     height: 80px;
@@ -29,7 +17,7 @@
     color: #2F2E41;
   }
 
-  h2 {
+  .h2-new {
     position: absolute;
     width: 267px;
     height: 131px;
@@ -48,7 +36,7 @@
     color: #2F2E41;
   }
 
-  svg {
+  .svg-new {
     position: absolute;
     width: 362px;
     height: 265px;
