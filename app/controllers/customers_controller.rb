@@ -21,7 +21,7 @@ class CustomersController < ApplicationController
     # end
     @queue_position.position = last_position ? last_position + 1 : 1
     if @queue_position.save!
-      redirect_to store_path(@store)
+      redirect_to store_customer_queue_position_path(@store, @customer, @queue_position)
     else
       render 'new'
     end
