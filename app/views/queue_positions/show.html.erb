@@ -6,16 +6,20 @@
 </div>
 <div class="status-card">
   <div class="card-number">
-    14
-    <% @queue_position.position %>
+    <%= @queue_position.position %>
   </div>
 </div>
 
 
 <div class="status-buttons">
-  <%= link_to "<", "#", class: "btn btn-leave" %>
-
-  <%= link_to ">", "#", class: "btn btn-alert" %>
+  <div class="btn-left">
+    <%= link_to "<", "#", class: "btn btn-leave" %>
+    <p class="btn-text">Leave</p>
+  </div>
+  <div class="btn-right">
+    <%= link_to ">", "#", class: "btn btn-alert" %>
+    <p class="btn-text">Alert me!</p>
+  </div>
 </div>
 
 <%# !!! the if statment should be here !!! %>
