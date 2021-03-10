@@ -27,6 +27,11 @@ class CustomersController < ApplicationController
     end
   end
 
+  def index
+    @store = Store.find(params[:store_id])
+    @queue_positions = QueuePosition.where(store: @store).all
+  end
+
   # def destroy
   #   @customer.destroy
   #   redirect_to customers_path
