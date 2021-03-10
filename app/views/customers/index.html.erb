@@ -6,7 +6,10 @@
   <div class="col-12 col-sm-8 mx-auto text-center my-5">
     <ul class="list-group">
       <% @queue_positions.each do |queue_position| %>
-        <li class="list-group-item list-group-item-action list-group-item-info">Customer mobile number: <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> -- Entered: <%= queue_position.entered ? "Yes" : "No" %></li>
+        <li class="list-group-item list-group-item-action list-group-item-info">
+        Customer mobile number: <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> -- Entered: <%= queue_position.entered ? "Yes" : "No" %> --
+        <%= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+        </li>
       <% end %>
     </ul>
   </div>
