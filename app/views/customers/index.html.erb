@@ -3,10 +3,10 @@
   <div class="col-12 mx-auto text-center">
     <h1>All customers in the queue!</h1>
   </div>
-  <div class="col-12 col-sm-6 mx-auto text-center my-5">
+  <div class="col-12 col-sm-8 mx-auto text-center my-5">
     <ul class="list-group">
       <% @queue_positions.each do |queue_position| %>
-        <li class="list-group-item list-group-item-action list-group-item-info"><%= queue_position.position %></li>
+        <li class="list-group-item list-group-item-action list-group-item-info">Customer mobile number: <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> -- Entered: <%= queue_position.entered ? "Yes" : "No" %></li>
       <% end %>
     </ul>
   </div>
