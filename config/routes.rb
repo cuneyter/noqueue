@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :stores, only: %i[new create index show] do
-    resources :customers, only: %i[new create] do
-      resources :queue_positions, only: %i[show update destroy]
+    resources :customers, only: %i[new create index] do
+      resources :queue_positions, only: %i[show update]
     end
   end
   resources :queue_positions, only: %i[destroy]
