@@ -1,17 +1,30 @@
-<div class="container position-absolute top-50 start-50 translate-middle">
-<div class="row">
-  <div class="col-12 mx-auto text-center">
-    <h1>All customers in the queue!</h1>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 mx-auto text-center">
+      <h1>All customers in the queue!</h1>
+    </div>
+    <div class="col-12 col-sm-8 mx-auto text-center my-5">
+
+      <!-- <ul class="list-group">
+        <%# @queue_positions.each do |queue_position| %>
+          <li class="list-group-item list-group-item-action list-group-item-info">
+          Customer mobile number: <%#= queue_position.customer.mobile_number %> -- Position: <%#= queue_position.position %> -- Entered: <%#= queue_position.entered ? "Yes" : "No" %> --
+          <%#= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+          </li>
+        <%# end %>
+      </ul> -->
+
+      <div class="cards-customers">
+        <% @queue_positions.each do |queue_position| %>
+          <div class="card">
+            <p><i class="fas fa-mobile-alt"></i> <%= queue_position.customer.mobile_number %></p>
+            <p>Position: <%= queue_position.position %></p>
+            <p>Entered: <%= queue_position.entered ? "Yes" : "No" %></p>
+            <%= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
-  <div class="col-12 col-sm-8 mx-auto text-center my-5">
-    <ul class="list-group">
-      <% @queue_positions.each do |queue_position| %>
-        <li class="list-group-item list-group-item-action list-group-item-info">
-        Customer mobile number: <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> -- Entered: <%= queue_position.entered ? "Yes" : "No" %> --
-        <%= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
 </div>
