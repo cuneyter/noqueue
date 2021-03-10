@@ -3,3 +3,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding: 32px;
 }
+
+@media (max-width: 576px) {
+  .cards-stores {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
