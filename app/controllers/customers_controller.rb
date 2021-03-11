@@ -1,4 +1,9 @@
 class CustomersController < ApplicationController
+  def index
+    @store = Store.find(params[:store_id])
+    @queue_positions = QueuePosition.where(store: @store).all
+  end
+
   def new
     @customer = Customer.new
   end
@@ -27,10 +32,6 @@ class CustomersController < ApplicationController
     end
   end
 
-  def index
-    @store = Store.find(params[:store_id])
-    @queue_positions = QueuePosition.where(store: @store).all
-  end
 
   # def destroy
   #   @customer.destroy

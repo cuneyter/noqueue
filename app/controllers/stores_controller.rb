@@ -1,4 +1,13 @@
 class StoresController < ApplicationController
+  def index
+    @stores = Store.all
+  end
+
+  def show
+    @store = Store.find(params[:id])
+    @customer = Customer.new
+  end
+
   def new
     @store = Store.new
   end
@@ -10,15 +19,6 @@ class StoresController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def show
-    @store = Store.find(params[:id])
-    @customer = Customer.new
-  end
-
-  def index
-    @store = Store.all
   end
 
   private
