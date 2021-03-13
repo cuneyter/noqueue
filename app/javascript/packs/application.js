@@ -3,10 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
+// import { initSweetalert } from '../plugins/init_sweetalert';
 
 Rails.start()
 Turbolinks.start()
@@ -42,14 +43,12 @@ document.addEventListener('turbolinks:load', () => {
 
 // sweetalert pop up alert for leaving
 
-import { initSweetalert } from '../plugins/init_sweetalert';
-
-initSweetalert('#alert-leaving', {
-  title: "Are you sure you want to leave the queue?",
-  buttons: true,
-  dangerMode: true,
-  icon: "warning"
-}, (value) => {
-  const link = document.querySelector('#leave-link');
-  link.click();
-});
+// initSweetalert('#alert-leaving', {
+//   title: "Are you sure you want to leave the queue?",
+//   buttons: true,
+//   dangerMode: true,
+//   icon: "warning"
+// }, (value) => {
+//   const link = document.querySelector('#leave-link');
+//   link.click();
+// });
