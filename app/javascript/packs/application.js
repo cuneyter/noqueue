@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 Rails.start()
 Turbolinks.start()
@@ -42,7 +43,6 @@ document.addEventListener('turbolinks:load', () => {
 
 // sweetalert pop up alert for leaving
 
-import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('#alert-leaving', {
   title: "Are you sure you want to leave the queue?",

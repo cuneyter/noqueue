@@ -7,5 +7,7 @@ Rails.application.routes.draw do
       resources :queue_positions, only: %i[show update]
     end
   end
-  resources :queue_positions, only: %i[destroy]
+  resources :stores, only: [:show] do
+    resources :queue_positions, only: %i[destroy]
+  end
 end

@@ -3,6 +3,7 @@ class QueuePositionsController < ApplicationController
   end
 
   def destroy
+    raise
     @queue_position = QueuePosition.find(params[:id])
     current_qp = @queue_position.position
     @queue_position.destroy
