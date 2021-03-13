@@ -7,41 +7,27 @@ import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
+import { refresh_position } from '../src/refresh';
 // import { initSweetalert } from '../plugins/init_sweetalert';
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 
 
 // ----------------------------------------------------
-// Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
+// Note: ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
 // External imports
 import "bootstrap";
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  const queuePositionNumber = document.querySelector("#counter");
-  let refresh;
-  function reloadWindow() {
-    window.location.reload();
-  }
-  if (queuePositionNumber) {
-    refresh = setInterval(reloadWindow, 5000);
-  }
-  if (!queuePositionNumber) {
-    clearInterval(refresh);
-  }
+  refresh_position();
 });
 
-// sweetalert pop up alert for leaving
+// sweet_alert pop up alert for leaving
 
 // initSweetalert('#alert-leaving', {
 //   title: "Are you sure you want to leave the queue?",
