@@ -27,6 +27,17 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const queuePositionNumber = document.querySelector("#counter");
+  let refresh;
+  function reloadWindow() {
+    window.location.reload();
+  }
+  if (queuePositionNumber) {
+    refresh = setInterval(reloadWindow, 5000);
+  }
+  if (!queuePositionNumber) {
+    clearInterval(refresh);
+  }
 });
 
 // sweetalert pop up alert for leaving
