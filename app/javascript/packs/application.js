@@ -28,3 +28,17 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+// sweetalert pop up alert for leaving
+
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#alert-leaving', {
+  title: "Are you sure you want to leave the queue?",
+  buttons: true,
+  dangerMode: true,
+  icon: "warning"
+}, (value) => {
+  const link = document.querySelector('#leave-link');
+  link.click();
+});
