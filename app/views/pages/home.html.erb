@@ -1,7 +1,6 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
-
 <div class="home-header">
   <h2>Queuing is boring. <br> We make it simple for you.</h2>
 </div>
@@ -15,8 +14,11 @@
     <p class="mt-4">Browse the stores</p>
     <i class="fas fa-arrow-right"></i>
   </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
         <div class="card">
-        <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
+          <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
           <div class="card-info">
             <div>
               <h2>Store name</h2>
@@ -24,9 +26,37 @@
             </div>
             <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
             <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
-            </div>
           </div>
         </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
+          <div class="card-info">
+            <div>
+              <h2>Store name</h2>
+              <p>Description</p>
+            </div>
+            <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+            <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
+          <div class="card-info">
+            <div>
+              <h2>Store name</h2>
+              <p>Description</p>
+            </div>
+            <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+            <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="partner-btn">
@@ -52,3 +82,7 @@
     <% end %>
   </div>
 </div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
