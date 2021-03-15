@@ -1,13 +1,47 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
-<div class="container">
-  <h1>NoQ</h1>
-  <p>Queueing is boring. We make it simple for you</p>
+
+<div class="home-header">
+  <h2>Queuing is boring. <br> We make it simple for you.</h2>
+</div>
+
+<div class="col-12 mx-auto text-center my-3">
+  <%= image_tag "Hello.svg", width: 225 %>
 </div>
 
 <div class="container">
-  <h2>Browse the stores we work with</h2>
+  <div class="browse-header">
+    <p class="mt-4">Browse the stores</p>
+    <i class="fas fa-arrow-right"></i>
+  </div>
+        <div class="card">
+        <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
+          <div class="card-info">
+            <div>
+              <h2>Store name</h2>
+              <p>Description</p>
+            </div>
+            <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+            <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+            </div>
+          </div>
+        </div>
+</div>
+
+<div class="partner-btn">
+  <div class="btn-grey">
+    <%= link_to "Partner with us", "#", class: "btn-grey" %>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <p class="mt-4">Browse the stores</p>
   <div class="cards-stores">
     <% @stores.each do |store| %>
       <%= link_to store_path(store) do %>
