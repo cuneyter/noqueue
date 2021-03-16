@@ -1,6 +1,7 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
+
 <div class="home-header">
   <h2>Queuing is boring. <br> We make it simple for you.</h2>
 </div>
@@ -22,7 +23,18 @@
           <div class="card-info">
             <div>
               <h2>Store name</h2>
-              <p>Description</p>
+            </div>
+            <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+            <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="https://png2.cleanpng.com/sh/b2ff330c58fd76a2758a50a487a05500/L0KzQYm3VcEzN6t2j5H0aYP2gLBuTgRme5R0Rdp4bXXzfMb6TgJmfJJuhJ98dYDogr7okvtmfF55feVsbz3sgrbzgf5lNWZmfqgEZHa8cYfqg8U1NmI1Uak6NkK8QYa5VsEyOWg4T6gDM0KxgLBu/kisspng-tesco-homeplus-retail-supermarket-tesco-ireland-5af69df9a6cc54.1097162915261117376832.png" />
+          <div class="card-info">
+            <div>
+              <h2>Store name</h2>
             </div>
             <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
             <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
@@ -35,7 +47,6 @@
           <div class="card-info">
             <div>
               <h2>Store name</h2>
-              <p>Description</p>
             </div>
             <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
             <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
@@ -48,7 +59,6 @@
           <div class="card-info">
             <div>
               <h2>Store name</h2>
-              <p>Description</p>
             </div>
             <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
             <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
@@ -66,23 +76,21 @@
 </div>
 
 
-
-
-
+<!--
 
 <div class="container">
   <p class="mt-4">Browse the stores</p>
   <div class="cards-stores">
-    <% @stores.each do |store| %>
-      <%= link_to store_path(store) do %>
+    <%# @stores.each do |store| %>
+      <%#= link_to store_path(store) do %>
         <div class="card">
-          <h3><%= store.store_name %></h3>
+          <h3><%#= store.store_name %></h3>
         </div>
-      <% end %>
-    <% end %>
+      <%# end %>
+    <%# end %>
   </div>
 </div>
+ -->
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="main.js"></script>
+
