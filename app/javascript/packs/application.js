@@ -22,8 +22,14 @@ ActiveStorage.start();
 
 // External imports
 import "bootstrap";
+import 'swiper/swiper-bundle.css';
+import {initSwiper} from '../main';
 
 document.addEventListener('turbolinks:load', () => {
+
+  // Call your functions here, e.g:
+  // initSelect2();
+  initSwiper();
   refresh_position();
 });
 
@@ -38,3 +44,4 @@ document.addEventListener('turbolinks:load', () => {
 //   const link = document.querySelector('#leave-link');
 //   link.click();
 // });
+
