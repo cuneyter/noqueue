@@ -20,7 +20,7 @@
             <p><i class="fas fa-mobile-alt"></i> <%= queue_position.customer.mobile_number %></p>
             <p>Position: <%= queue_position.position %></p>
             <p>Entered: <%= queue_position.entered ? "Yes" : "No" %></p>
-            <%= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+            <%= link_to "Delete", remove_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
           </div>
         <% end %>
       </div>

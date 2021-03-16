@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   resources :queue_positions, only: %i[destroy]
+  delete "remove_from_store/:id", to: 'queue_positions#remove_from_store', as: :remove
 end
