@@ -10,26 +10,28 @@
   <%= image_tag "Hello.svg", width: 225 %>
 </div>
 
-<div class="container">
+<div class="container-1">
   <div class="browse-header">
     <p class="mt-4">Browse the stores</p>
     <i class="fas fa-arrow-right"></i>
   </div>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="card">
-          <img src="https://1000logos.net/wp-content/uploads/2017/02/IKEA-Emblem-Criticism.jpg" />
-          <div class="card-info">
-            <div>
-              <h2>Store name</h2>
+      <% @stores.each do |store| %>
+        <%= link_to store_path(store), class: "swiper-slide" do %>
+            <div class="cards-stores">
+              <div class="card">
+                <img src="<%= store.logo_url%>" />
+                <div class="card-info">
+                  <h2><%= store.store_name %></h2>
+                  <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+                  <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+                </div>
+              </div>
             </div>
-            <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
-            <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
+        <% end %>
+      <% end %>
+      <!-- <div class="swiper-slide">
         <div class="card">
           <img src="https://png2.cleanpng.com/sh/b2ff330c58fd76a2758a50a487a05500/L0KzQYm3VcEzN6t2j5H0aYP2gLBuTgRme5R0Rdp4bXXzfMb6TgJmfJJuhJ98dYDogr7okvtmfF55feVsbz3sgrbzgf5lNWZmfqgEZHa8cYfqg8U1NmI1Uak6NkK8QYa5VsEyOWg4T6gDM0KxgLBu/kisspng-tesco-homeplus-retail-supermarket-tesco-ireland-5af69df9a6cc54.1097162915261117376832.png" />
           <div class="card-info">
@@ -64,7 +66,7 @@
             <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -74,7 +76,6 @@
     <%= link_to "Partner with us", "#", class: "btn-grey" %>
   </div>
 </div>
-
 
 <!--
 
