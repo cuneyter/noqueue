@@ -52,7 +52,7 @@ stores = [
     },
     {
         store_name: "Costa",
-        logo_url: "https://www.alkout.com/wp-content/uploads/2017/10/Artboard-1-100-85.jpg"
+        logo_url: "http://eurobienes.com/wp-content/uploads/2019/03/logos-black-costa-coffee.png"
     },
     {
         store_name: "Apple",
