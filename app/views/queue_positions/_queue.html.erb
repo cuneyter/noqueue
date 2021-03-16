@@ -11,13 +11,7 @@
 </div>
 
 <div class="status-buttons">
-  <div class="btn-left" id="alert-leaving">
-    <button class= "btn btn-leave"><</button>
-    <%= link_to "", "/leave", id: "leave-link", class: "hidden" %>
-    <p class="btn-text">Leave</p>
-  </div>
-  <div class="btn-right">
-    <%= link_to ">", "#", class: "btn btn-alert" %>
-    <p class="btn-text">Alert me!</p>
+  <div class="btn-queue" id="alert-leaving">
+    <%= link_to "Leave", "/leave", id: "leave-link", class: "btn btn-queue" %>
   </div>
 </div>
