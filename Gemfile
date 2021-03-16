@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Faker gem for db seed
 gem 'faker'
+
+# qrcode generator
+gem "rqrcode"
