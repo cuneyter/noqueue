@@ -52,7 +52,7 @@ stores = [
     },
     {
         store_name: "Costa",
-        logo_url: "https://www.alkout.com/wp-content/uploads/2017/10/Artboard-1-100-85.jpg"
+        logo_url: "https://metquarter.com/wp-content/uploads/2018/10/COSTA_COFFEE_SCREEN_USE_BLK.png"
     },
     {
         store_name: "Apple",
