@@ -52,7 +52,7 @@ stores = [
     },
     {
         store_name: "Costa",
-        logo_url: "http://eurobienes.com/wp-content/uploads/2019/03/logos-black-costa-coffee.png"
+        logo_url: "https://metquarter.com/wp-content/uploads/2018/10/COSTA_COFFEE_SCREEN_USE_BLK.png"
     },
     {
         store_name: "Apple",
