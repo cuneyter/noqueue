@@ -22,11 +22,11 @@ ActiveStorage.start();
 
 // External imports
 import "bootstrap";
-import 'swiper/swiper-bundle.css';
+// import 'swiper';
 import {initSwiper} from '../main';
+// import 'swiper/swiper-bundle.css';
 
 document.addEventListener('turbolinks:load', () => {
-
   // Call your functions here, e.g:
   // initSelect2();
   initSwiper();
