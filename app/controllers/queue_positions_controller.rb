@@ -35,6 +35,10 @@ class QueuePositionsController < ApplicationController
   end
 
   def show
-    @queue_position = QueuePosition.find(params[:id])
+    begin
+      @queue_position = QueuePosition.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      redirect_to root_path
+    end
   end
 end
