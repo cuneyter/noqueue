@@ -6,7 +6,7 @@ const refresh_position = () => {
     window.location.reload();
   }
   if (queuePositionNumber) {
-    refresh = setInterval(reloadWindow, 5000);
+    refresh = setInterval(reloadWindow, 15000);
   }
   if (!queuePositionNumber) {
     clearInterval(refresh);
