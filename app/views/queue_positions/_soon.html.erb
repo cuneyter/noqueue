@@ -1,8 +1,8 @@
 <div class="container position-absolute top-50 start-50 translate-middle">
 <div class="row">
   <div class="col-12 mx-auto text-center">
-    <h1>Ready!</h1>
-    <p class="position-number" id="counter">There are only <%= @queue_position.position - 1 %> ahead of you</p>
+    <h1>You are number</h1>
+    <h1 class="position-number" id="counter"><%= @queue_position.position %></h1>
   </div>
   <div class="col-12 mx-auto text-center my-5">
     <%= image_tag "Taken.svg", width: 300 %>
@@ -10,5 +10,10 @@
   <div class="col-12 mx-auto text-center">
     <h1 class="fw-light">It's almost your turn so get closer...!</h1>
   </div>
+  <div class="status-buttons">
+  <div class="btn-queue">
+    <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
+  </div>
+</div>
 </div>
 </div>
