@@ -2,4 +2,3 @@ meta_product_name: "NoQ"
 meta_title: "NoQ - Skip the real queue"
 meta_description: "Avoid the hassle of standing in line with the NoQ App"
 meta_image: "Cover.png" # should exist in `app/assets/images/`
-# twitter_account: "@product_twitter_account"   # required for Twitter Cards

@@ -1,3 +1,5 @@
+<% content_for :meta_title, "Position: #{@queue_position.position}" %>
+
 <div class="page-header">
   <h1>Awesome!</h1>
 </div>
@@ -15,6 +17,4 @@
     <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
   </div>
 </div>
-
-
 
