@@ -1,22 +1,22 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row">
-    <div class="col-12 mx-auto text-center mb-3">
-      <h1>All <%= @store.store_name %> customers in the queue!</h1>
+    <div class="col-12 mx-auto text-center">
+      <p class="fs-4">Hello <%= @store.store_name %>! <br> You have <span class="text-primary fs-1 fw-bolder"><%= @store.queue_positions.count %></span> customers <br> in the queue.</p>
     </div>
 
     <div class="col-12 mx-auto text-center mb-3">
-      <%= image_tag "undraw_Traveling_re_weve.svg", width: 300 %>
+      <%= image_tag "undraw_Traveling_re_weve.svg", width: 300, height: 200 %>
     </div>
 
     <div class="col-12 col-sm-8 mx-auto text-center">
       <ul class="list-group">
         <% @queue_positions.each do |queue_position| %>
           <li class="list-group-item list-group-item-action list-group-item-primary mb-1">
-          <i class="fas fa-mobile-alt"></i> <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> -- Entered: <%= queue_position.entered ? "Yes" : "No" %> --
-          <%= link_to "Delete", queue_position_path(queue_position), method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+          <i class="fas fa-mobile-alt"></i> <%= queue_position.customer.mobile_number %> -- Position: <%= queue_position.position %> --
+          <%= link_to "Entered!", remove_path(queue_position), class: "btn btn-danger btn-sm rounded-3", method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
           </li>
         <% end %>
       </ul>
