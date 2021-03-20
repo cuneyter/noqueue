@@ -1,1 +1,44 @@
-<%= render "queue_positions/enter" %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/flashes' %>
+
+<div class="home-header">
+  <h2>Queuing is boring. <br> We make it simple for you.</h2>
+</div>
+
+<div class="col-12 mx-auto text-center my-3">
+  <%= image_tag "Hello.svg", width: 225 %>
+</div>
+
+<div class="container-1">
+  <div class="browse-header">
+    <p class="mt-4">Browse the stores</p>
+    <i class="fas fa-arrow-right"></i>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <% @stores.each do |store| %>
+        <%= link_to store_path(store), class: "swiper-slide" do %>
+            <div class="cards-stores">
+              <div class="card">
+                <img src="<%= store.logo_url%>" />
+                <div class="card-info">
+                  <h2><%= store.store_name %></h2>
+                  <h2 class="card-icon"><i class="fas fa-shopping-cart"></i></h2>
+                  <img src="https://miro.medium.com/max/4800/1*sHmqYIYMV_C3TUhucHrT4w.png" class="card-store QR-code" />
+                </div>
+              </div>
+            </div>
+        <% end %>
+      <% end %>
+      <div class="swiper-slide">
+        <div class="fake-card"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="partner-btn">
+  <div class="btn-grey">
+    <%= link_to "Partner with us", "#", class: "btn-grey" %>
+  </div>
+</div>
