@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import { refresh_position } from '../src/refresh';
+import "../stylesheets/application";
 
 Rails.start();
 Turbolinks.start();
