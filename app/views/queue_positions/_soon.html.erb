@@ -1,21 +1,28 @@
 <% content_for :meta_title, "Position: #{@queue_position.position}" %>
 
 <div class="container position-absolute top-50 start-50 translate-middle">
-<div class="row">
-  <div class="col-12 mx-auto text-center">
-    <h1>You are number</h1>
-    <h1 class="position-number" id="counter"><%= @queue_position.position %></h1>
+  <div class="row">
+    <div class="col-12 mx-auto text-center">
+      <h1>You are number</h1>
+      <h1 class="position-number" id="counter"><%= @queue_position.position %></h1>
+    </div>
+    <div class="col-12 mx-auto text-center my-3">
+      <%= image_tag "Taken.svg", width: 300, height: 200 %>
+    </div>
+    <div class="col-12 mx-auto text-center">
+      <h1 class="fw-light">It's almost your turn so get closer...!</h1>
+    </div>
+
+    <%# Counter %>
+    <div class="page-refresh mt-3">
+      <p>This page will refresh in <span id="countdown">10</span> seconds.</p>
+      <p>Enjoy your queue free time :)</p>
+    </div>
+
+    <div class="status-buttons">
+      <div class="btn-queue">
+        <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
+      </div>
+    </div>
   </div>
-  <div class="col-12 mx-auto text-center my-3">
-    <%= image_tag "Taken.svg", width: 300 %>
-  </div>
-  <div class="col-12 mx-auto text-center">
-    <h1 class="fw-light">It's almost your turn so get closer...!</h1>
-  </div>
-  <div class="status-buttons">
-  <div class="btn-queue">
-    <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
-  </div>
-</div>
-</div>
 </div>
