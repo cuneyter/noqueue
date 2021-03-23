@@ -1,10 +1,10 @@
 <% content_for :meta_title, "Position: #{@queue_position.position}" %>
 
-<div class="page-header">
-  <h1>Awesome!</h1>
+<div class="page-header mx-3">
+  <h1>Awesome <br> you are in the queue!</h1>
 </div>
 <div class="page-subheader">
-  <h2>You are number...</h2>
+  <h2>Your position:</h2>
 </div>
 <div class="status-card">
   <div class="card-number" id="counter">
@@ -12,7 +12,13 @@
   </div>
 </div>
 
+
 <p>Counter: <span id="countdown">10</span></p>
+
+<div class="page-refresh">
+  <p>This will refresh automatically.</p>
+</div>
+
 
 <div class="status-buttons">
   <div class="btn-queue">
