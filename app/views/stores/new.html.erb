@@ -1,23 +1,22 @@
 <div class="container mt-3">
   <div class="row">
-    <div class="col-12 mx-auto text-center my-5">
+    <div class="col-12 mx-auto text-center my-4">
       <%= image_tag "store_new_1.svg", width: 300, height: 200 %>
     </div>
-    <div class="col-12 mx-auto text-center">
-      <h1>Create a new store</h1>
-    </div>
-    <div class="col-12 col-sm-4 mx-auto text-center">
+    <h1 class="partner-header">Become a <br> NoQ partner</h1>
+
+    <div class="col-12 text-center">
       <%= simple_form_for(@store) do |f| %>
-        <div class= "">
-          <%= f.input :store_name, label: 'Store Name:', class: "" %>
+        <div class= "partner-input">
+          <%= f.input :store_name, placeholder: 'Business name', class: 'partner-input' %>
         </div>
-        <div class= "">
-          <%= f.input :store_capacity, label: 'Store Capacity:', class: "" %>
+        <div class= "partner-input">
+          <%= f.input :store_capacity, placeholder: 'Capacity of your store:', class: 'partner-input' %>
         </div>
-        <div class= "">
-          <%= f.input :logo_url, label: 'Store Logo URL:', class: "" %>
+        <div class= "partner-input">
+          <%= f.input :logo_url, placeholder: 'Link to your logo:', class: 'partner-input' %>
         </div>
-        <%= f.submit "Save my Store!", class: "btn btn-primary" %>
+        <%= f.submit 'Submit', class: 'submit-btn' %>
       <% end %>
     </div>
   </div>

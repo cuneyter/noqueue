@@ -1,0 +1,31 @@
+.partner-header {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.partner-input {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  width: 290px;
+  height: 60px;
+}
+
+// .form-control {
+//   all: none;
+// }
+
+.submit-btn {
+  color: white;
+  background: #7C2DF8;
+  border-radius: 50px;
+  width: 290px;
+  height: 60px;
+}
