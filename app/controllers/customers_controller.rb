@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
   def index
     @store = Store.find(params[:store_id])
-    @queue_positions = QueuePosition.where(store: @store).all
+    @queue_positions = QueuePosition.where(store: @store).all.order(position: :asc)
   end
 
   def new
