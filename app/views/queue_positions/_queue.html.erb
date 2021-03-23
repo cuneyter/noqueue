@@ -12,17 +12,14 @@
   </div>
 </div>
 
-
-<p>Counter: <span id="countdown">10</span></p>
-
-<div class="page-refresh">
-  <p>This will refresh automatically.</p>
+<%# Counter %>
+<div class="page-refresh mt-3">
+  <p>This page will refresh in <span id="countdown">10</span> seconds.</p>
+  <p>Enjoy your queue free time :)</p>
 </div>
-
 
 <div class="status-buttons">
   <div class="btn-queue">
     <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
   </div>
 </div>
-
