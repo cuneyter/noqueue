@@ -12,6 +12,8 @@
   </div>
 </div>
 
+<p>Counter: <span id="countdown">10</span></p>
+
 <div class="status-buttons">
   <div class="btn-queue">
     <%= link_to "Leave", queue_position_path(@queue_position), class: "btn btn-queue", method: :delete, data: { confirm: "Are you sure you want to leave the queue?" } %>
