@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+
   def index
     @stores = Store.all
   end
@@ -13,9 +14,11 @@ class StoresController < ApplicationController
   end
 
   def create
-    @store = Store.new(stores_params)
+    @store = Store.new(store_params)
+    @store.user_id = current_user.id
+    @store.save
     if @store.save
-      redirect_to store_path(@store)
+      redirect_to store_customers_path(@store)
     else
       render 'new'
     end
@@ -23,7 +26,7 @@ class StoresController < ApplicationController
 
   private
 
-  def stores_params
+  def store_params
     params.require(:store).permit(:store_name, :store_capacity, :logo_url)
   end
 end
