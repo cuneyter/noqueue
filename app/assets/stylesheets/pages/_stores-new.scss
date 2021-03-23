@@ -1,38 +1,60 @@
+.body-wrapper {
+  background: #E8DFF8;
+  height: 100vh;
+}
+
+.create-image {
+  padding-top: 55px;
+  padding-bottom: 30px;
+}
+
 .partner-header {
   width: 300px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   font-family: 'Quicksand', sans-serif;
 }
 
-.partner-input {
+.form-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+}
+
+.partner-input {
   background: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   width: 290px;
-  height: 60px;
+  height: 55px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2F2E41;
+  padding-left: 20px;
+  margin: 0 auto;
 }
 
-// .form-control {
-//   all: none;
-// }
+.partner-input::-webkit-input-placeholder {
+  color: #A4A4A4;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
 
 .submit-btn {
   color: white;
   background: #7C2DF8;
   border-radius: 50px;
   width: 290px;
-  height: 60px;
-}
-
-.form-container {
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  justify-content: center;
+  height: 55px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
 }
