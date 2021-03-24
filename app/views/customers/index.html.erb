@@ -1,31 +1,34 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-12 mx-auto text-center">
-      <h1>Hello <%= @store.store_name %>!</h1>
-      <h2> You have <span class="que-all"><%= @store.queue_positions.count %></span> customers <br> in the queue.</h2>
-    </div>
+<div class="body-wrapper">
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-12 mx-auto text-center pt-3">
+        <h1>Hello <%= @store.store_name %>!</h1>
+        <h2 class="index-headers"> You have <span class="que-all"><%= @store.queue_positions.count %></span> customers <br> in the queue.</h2>
+      </div>
 
-    <div class="col-12 mx-auto text-center my-3">
-      <%= image_tag "undraw_Traveling_re_weve.svg", height: 240 %>
-    </div>
+      <div class="col-12 mx-auto text-center my-3">
+        <%= image_tag "undraw_Traveling_re_weve.svg", height: 240 %>
+      </div>
 
-    <div class="col-12 col-sm-8 mx-auto text-center mt-4">
-      <ul class="list-group">
-        <% @queue_positions.each do |queue_position| %>
-          <div class="container">
-            <div class="cards-customers">
-              <i class="fas fa-mobile-alt fa-2x"></i> <h4> **<%= queue_position.customer.mobile_number.delete(" ").split(//).last(3).join %> </h4>
-              <i class="fas fa-map-marker-alt fa-2x"></i> <h4> <%= queue_position.position %> </h4>
-              <div class="let-in-btn">
-                <i class="fas fa-sign-in-alt"></i> <%= link_to "Let in", remove_path(queue_position), class: "let-in-btn", method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+      <div class="col-12 col-sm-8 mx-auto text-center mt-4">
+        <ul class="list-group">
+          <% @queue_positions.each do |queue_position| %>
+            <div class="container">
+              <div class="cards-customers">
+                <!-- <div class="mobile-div"> -->
+                  <i class="fas fa-mobile-alt fa-2x"></i> <h4> **<%= queue_position.customer.mobile_number.delete(" ").split(//).last(3).join %> </h4>
+                <!-- </div> -->
+                <div class="let-in-btn">
+                  <i class="fas fa-sign-in-alt"></i> <%= link_to "Let in", remove_path(queue_position), class: "let-in-btn", method: :delete, data: { confirm: "Are you sure you want to delete queue position #{queue_position.position}?" } %>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

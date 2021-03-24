@@ -1,3 +1,17 @@
+.body-wrapper {
+   background: #E8DFF8;
+   height: 100%;
+ }
+
+// .navbar-lewagon {
+//   background: #E8DFF8 !important;
+// }
+
+.index-headers {
+  font-weight: 300 !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .cards-customers {
   display: flex;
   justify-content: space-between;
@@ -7,6 +21,7 @@
   border-radius: 15px;
   width: 290px;
   height: 60px;
+  margin-bottom: 11px;
 }
 
 h4 {
@@ -16,23 +31,18 @@ h4 {
   font-weight: lighter;
   margin-top: 0.5rem;
   margin-right: 12px;
-  margin-left: -15px;
+  margin-left: -3px;
 }
 
 .fa-mobile-alt {
   color: #2F2E41;
   font-size: 32px;
-  padding-left: 20px;
-}
-
-.fa-map-marker-alt {
-  color: #2F2E41;
-  font-size: 32px;
+  padding-left: 40px;
 }
 
 .let-in-btn {
   border-radius: 15px;
-  width: 105px;
+  width: 150px;
   height: 60px;
   background: #7C2DF8;
   font-size: 18px;
@@ -41,11 +51,12 @@ h4 {
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding-right: 10px;
 }
 
 .fa-sign-in-alt {
   color: white;
-  font-size: 32px;
-  padding-left: 8px;
+  font-size: 28px;
+  padding-left: 30px;
 }
