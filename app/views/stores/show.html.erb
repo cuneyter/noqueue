@@ -1,21 +1,20 @@
-<div class="container mt-5">
+<div class="container pt-5">
   <div class="row">
-    <div class="col-12 mx-auto text-center my-5">
-      <%= image_tag "Join.svg", width: 300 %>
+    <div class="show-image col-12 mx-auto text-center">
+      <%= image_tag "Join.svg", width: 330 %>
     </div>
+    <h1 class="show-header mb-2">Welcome to <%= @store.store_name %>!</h1>
     <div class="col-12 mx-auto text-center">
-      <h1>Welcome to <%= @store.store_name %>!</h1>
+      <p class="fw-light">Secure your spot in the queue <br> here, and avoid the hassle <br>of standing in line.</p>
     </div>
-    <div class="col-12 mx-auto text-center">
-      <p class="fw-light">Secure your spot in the queue here, and avoid the hassle of standing in the line.</p>
-    </div>
-    <div class="col-12 col-sm-4 mx-auto text-center">
-      <%= simple_form_for [ @store, @customer ] do |f| %>
-        <div class= "mobile-input">
-          <%= f.input :mobile_number, class: "mobile-input" %>
-        </div>
-        <%= f.submit "Secure my spot!", class: "btn btn-primary" %>
-      <% end %>
+    <div class="signup-form-container">
+      <div class="col-12 col-sm-4 mx-auto text-center">
+        <%= simple_form_for [ @store, @customer ] do |f| %>
+          <%= f.input :mobile_number, placeholder: 'Enter your mobile:', input_html: {class: 'mobile-input'}, label: false %>
+          <%= f.submit "Secure my spot!", class: "submit-btn" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
