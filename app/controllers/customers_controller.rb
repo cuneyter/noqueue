@@ -17,8 +17,12 @@ class CustomersController < ApplicationController
 
     @queue_position.store = @store
     @queue_position.customer = @customer
-    last_position = QueuePosition.where(store: @store).order(position: :desc).first.position
-    @queue_position.position = last_position ? last_position + 1 : 1
+    last_position = QueuePosition.where(store: @store).order(position: :desc).first
+    if last_position.nil?
+      @queue_position.position = 1
+    else
+      @queue_position.position = last_position.position ? last_position.position + 1 : 1
+    end
     if @queue_position.save!
       redirect_to store_customer_queue_position_path(@store, @customer, @queue_position)
     else
