@@ -12,12 +12,26 @@ class StoresController < ApplicationController
     @store = Store.new
   end
 
+  # def create
+  #   @store = Store.new(store_params)
+  #   @store.user_id = current_user.id
+  #   if @store.save
+  #     redirect_to store_customers_path(@store)
+  #   else
+  #     render 'new'
+  #   end
+  # end
+
   def create
     @store = Store.new(store_params)
-    @store.user_id = current_user.id
-    if @store.save
-      redirect_to store_customers_path(@store)
-    else
+    begin
+      @store.user_id = current_user.id
+      if @store.save
+        redirect_to store_customers_path(@store)
+      else
+        render 'new'
+      end
+    rescue NoMethodError => e
       render 'new'
     end
   end
