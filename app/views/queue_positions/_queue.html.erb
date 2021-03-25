@@ -1,7 +1,7 @@
 <% content_for :meta_title, "Position: #{@queue_position.position}" %>
 
 <div class="page-header mx-3">
-  <h1>Awesome <br> you are in the queue!</h1>
+  <h1>Awesome <br> you are in the <br>queue for <%= @queue_position.store.store_name %>!</h1>
 </div>
 <div class="page-subheader">
   <h2>Your position:</h2>
@@ -12,9 +12,8 @@
   </div>
 </div>
 <%# Counter %>
-<div class="page-refresh mt-5">
-  <p>This page will refresh in <span id="countdown">10</span> seconds.</p>
-  <p>Enjoy your queue free time :)</p>
+<div class="page-refresh mt-4">
+  <p>This page will refresh in <span id="countdown">10</span> seconds.<br>Enjoy your queue free time!</p>
 </div>
 <div class="leave-buttons">
   <div class="btn-queue">
