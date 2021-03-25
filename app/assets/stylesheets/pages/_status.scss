@@ -1,7 +1,7 @@
 .page-header {
   text-align: center;
   margin: 0 auto;
-  padding-top: 110px;
+  padding-top: 90px;
   padding-bottom: 10px;
 }
 
@@ -15,10 +15,11 @@
 .page-refresh {
   text-align: center;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
-  font-style: italic;
-  font-size: 3px;
+  // font-style: italic;
+  // font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-number {
@@ -44,7 +45,7 @@
 }
 
 .leave-buttons {
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
