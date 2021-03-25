@@ -32,7 +32,7 @@
 
   </head>
 
-  <body>
+  <body class="<%= current_user ? 'background-user' : 'background-customer' %>">
     <%= yield %>
   </body>
 </html>
