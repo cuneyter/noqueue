@@ -40,7 +40,7 @@ stores = [
     },
     {
         store_name: "Tesco",
-        logo_url: "https://png2.cleanpng.com/sh/b2ff330c58fd76a2758a50a487a05500/L0KzQYm3VcEzN6t2j5H0aYP2gLBuTgRme5R0Rdp4bXXzfMb6TgJmfJJuhJ98dYDogr7okvtmfF55feVsbz3sgrbzgf5lNWZmfqgEZHa8cYfqg8U1NmI1Uak6NkK8QYa5VsEyOWg4T6gDM0KxgLBu/kisspng-tesco-homeplus-retail-supermarket-tesco-ireland-5af69df9a6cc54.1097162915261117376832.png"
+        logo_url: "https://brandslogos.com/wp-content/uploads/images/large/tesco-logo-black-and-white.png"
     },
     {
         store_name: "Pret A Manger",
