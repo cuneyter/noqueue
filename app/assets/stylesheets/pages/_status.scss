@@ -43,6 +43,13 @@
   justify-content: space-evenly;
 }
 
+.leave-buttons {
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .btn-leave {
   color: #2F2E41;
   background-color: white;
@@ -93,7 +100,7 @@
 
 .btn-queue {
   color: white;
-  background-color: #B33A3A;
+  background-color: #FF6584;
   font-size: 24px;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
