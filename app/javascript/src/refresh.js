@@ -11,7 +11,7 @@ const refresh_position = () => {
   }
   if (queuePositionNumber) {
     updateCount = setInterval(updateCounter, 1000);
-    refresh = setInterval(reloadWindow, 10000);
+    refresh = setInterval(reloadWindow, 5000);
   }
   if (!queuePositionNumber) {
     clearInterval(refresh);
