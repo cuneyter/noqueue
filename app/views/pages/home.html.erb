@@ -2,7 +2,8 @@
 <%= render 'shared/flashes' %>
 
 <div class="home-header">
-  <h2>Queuing is boring. <br> We make it simple for you.</h2>
+  <!-- <h2>Queuing is boring. <br> We make it simple for you.</h2> -->
+  <h2><%= current_user ? 'Queues are a problem. We solve them for you.' : 'Queuing is boring. We make it simple for you.' %></h2>
 </div>
 
 <div class="col-12 mx-auto text-center my-3">
