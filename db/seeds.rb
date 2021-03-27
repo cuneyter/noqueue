@@ -40,7 +40,7 @@ stores = [
     },
     {
         store_name: "Tesco",
-        logo_url: "https://brandslogos.com/wp-content/uploads/images/large/tesco-logo-black-and-white.png"
+        logo_url: "https://wearesnook.com/wp-content/uploads/2018/03/tesco-1-300x164.png"
     },
     {
         store_name: "Pret A Manger",
