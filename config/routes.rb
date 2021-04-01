@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'leave', to: 'pages#leave'
+  get 'how_it_works', to: 'pages#how_it_works'
 
   resources :stores, only: %i[new create index show] do
     resources :customers, only: %i[new create index] do
